@@ -80,6 +80,8 @@ const NftGrid = () => {
               ? "The Primordial Planetoids # " + Number(data[i].tokenId)
               : data[i].nftContract === config.BADBUDDIESADDRESS
               ? "Bad Buddies # " + Number(data[i].tokenId)
+              : data[i].nftContract === config.BADBUDDIES3ADDRESS
+              ? "Bad Buddies3 # " + Number(data[i].tokenId)
               : "Bad Buddies2 # " + Number(data[i].tokenId),
           nftImgUrl:
             data[i].nftContract === config.SPACEKITTYADDRESS
@@ -132,6 +134,10 @@ const NftGrid = () => {
               ? `${config.BADBUDDIESIMGIPFSADDRESS}/${Number(
                   data[i].tokenId
                 )}.png`
+              : data[i].nftContract === config.BADBUDDIES3ADDRESS
+              ? `${config.BADBUDDIES3IMGIPFSADDRESS}/${Number(
+                  data[i].tokenId
+                )}.png`
               : `${config.BADBUDDIES2IMGIPFSADDRESS}/${Number(
                   data[i].tokenId
                 )}.png`,
@@ -143,7 +149,7 @@ const NftGrid = () => {
           price: parseFloat(
             ethers.utils.formatEther(data[i].price.toString())
           ).toFixed(2),
-          listedTime: Number(data.listedTime),
+          listedTime: Number(data[i].listedTime),
           isSold: data.isSold,
         });
       }
@@ -219,6 +225,7 @@ const NftGrid = () => {
       setNftCollectionSearchState(false);
       setNftNameSearchState(false);
     } else if (searchNft === "Recently Items") {
+      console.log(marketplaceArrary);
       filterArray = marketplaceArrary.sort((a, b) =>
         a.listedTime < b.listedTime ? 1 : -1
       );
@@ -355,6 +362,7 @@ const NftGrid = () => {
               </option>
               <option className="sm:text-md text-normal">Bad Buddies </option>
               <option className="sm:text-md text-normal">Bad Buddies2 </option>
+              <option className="sm:text-md text-normal">Bad Buddies3 </option>
             </select>
 
             <select

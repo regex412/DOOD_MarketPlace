@@ -18,6 +18,7 @@ import elementoctopus_nft from "../../assets/images/nftimgs/elementoctopus_nft.p
 import qaf_nft from "../../assets/images/nftimgs/qaf_nft.png";
 import badbuddies_nft from "../../assets/images/nftimgs/badbuddies_nft.mp4";
 import badbuddies2_nft from "../../assets/images/nftimgs/badbuddies2_nft.mp4";
+import badbuddies3_nft from "../../assets/images/nftimgs/badbuddies3_nft.mp4";
 import primordialplanet_nft from "../../assets/images/nftimgs/primordialplanet_nft.png";
 
 const NftSlider = () => {
@@ -326,6 +327,23 @@ const NftSlider = () => {
                 </div>
                 <h1 className="dark:text-white font-bold p-3 text-black text-center">
                   Bad Buddies2
+                </h1>
+              </div>
+            </div>
+
+            <div className="px-3">
+              <div className="bg-white dark:bg-ternary-dark rounded-xl shadow-lg slider-card">
+                <div className="slider-img w-full">
+                  <video
+                    loop={true}
+                    autoPlay="autoPlay"
+                    muted
+                    className="rounded-t-xl">
+                    <source src={badbuddies3_nft} type="video/mp4" />
+                  </video>
+                </div>
+                <h1 className="dark:text-white font-bold p-3 text-black text-center">
+                  Bad Buddies3
                 </h1>
               </div>
             </div>

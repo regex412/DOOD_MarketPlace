@@ -22,6 +22,7 @@ module.exports = {
   PRIMORDIALPLANETOIDSADDRESS: "0x039ee36d11C825437621C16c5D71D05F09bF4B40",
   BADBUDDIESADDRESS: "0x104d6F6E48b4daabe7c4Cc849b0d485f1af48605",
   BADBUDDIES2ADDRESS: "0xf93a5592887B8e46A4Bb808fB8f702F33E60E292",
+  BADBUDDIES3ADDRESS: "0xe2AF8A40d6B0AEEd9A2851Bee78e0D2157a1d8FA",
 
   // Token Addresses to buy
   SDOODTOKENADDRESS: "0x697bb3B5E1eCf4fEbE6016321b0648d3d6C270B6",
@@ -61,6 +62,8 @@ module.exports = {
     "https://bafybeibfmtnyyojal4hgjgs7yz5mmwcfotvbj62vzlrlzjqjx2ibg42y5q.ipfs.nftstorage.link",
   BADBUDDIES2IPFSADDRESS:
     "https://bafybeidgictdcpg7fabu4v5epg7md4vi3ce7cepzoilq77zessqeefb3wm.ipfs.nftstorage.link",
+  BADBUDDIES3IPFSADDRESS:
+    "https://bafybeigje2kqqsjgjzxu7m6ok47iq647thlm5klxdru3fvdapgac7m3fqu.ipfs.nftstorage.link",
 
   // IMG IPFS Address
   DOODCATIMGIPFSADDRESS:
@@ -94,4 +97,6 @@ module.exports = {
     "https://bafybeiewbiuwfm4lb32dqu2iy2beexpgbe2bixwyv4mbrqysvsvjh4w2bu.ipfs.nftstorage.link",
   BADBUDDIES2IMGIPFSADDRESS:
     "https://bafybeidal7gu2222yad5a4muqtsxzbtrrlu4cueagsalzqidgv6zftbgry.ipfs.nftstorage.link",
+  BADBUDDIES3IMGIPFSADDRESS:
+    "https://bafybeifmncnwroplafavhxgzoemlvxdp4354hpcgt4qw5hutbotrlhf3fa.ipfs.nftstorage.link",
 };
