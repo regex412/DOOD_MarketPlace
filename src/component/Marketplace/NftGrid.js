@@ -19,7 +19,16 @@ const NftGrid = () => {
   const [getDataLoading, setGetDataLoading] = useState(false);
   const [marketplaceArrary, setMarketplaceArray] = useState([]);
 
-  const [marketplacefilterArray, setMarketPlaceFilterArray] = useState([]);
+  const [marketplaceRecentlyfilterArray, setMarketPlaceRecentlyFilterArray] =
+    useState([]);
+  const [marketplaceSearchfilterArray, setMarketPlaceSearchFilterArray] =
+    useState([]);
+  const [
+    marketplaceCollectionfilterArray,
+    setMarketPlaceCollectionFilterArray,
+  ] = useState([]);
+  const [marketplaceAZfilterArray, setMarketPlaceAZFilterArray] = useState([]);
+  const [marketplaceZAfilterArray, setMarketPlaceZAFilterArray] = useState([]);
   const [nftNameSearchState, setNftNameSearchState] = useState(false);
   const [nftCollectionsearchState, setNftCollectionSearchState] =
     useState(false);
@@ -53,8 +62,6 @@ const NftGrid = () => {
               ? "DoodCats # " + Number(data[i].tokenId)
               : data[i].nftContract === config.DEDNFTADDRESS
               ? "DedDoods # " + Number(data[i].tokenId)
-              : data[i].nftContract === config.DRAGONDOODLEADDRESS
-              ? "Dragon Doodles # " + Number(data[i].tokenId)
               : data[i].nftContract === config.ELEMENTOWLSADDRESS
               ? "ElementOwls # " + Number(data[i].tokenId)
               : data[i].nftContract === config.ELEMENTDOGSADDRESS
@@ -91,10 +98,6 @@ const NftGrid = () => {
               ? `${config.DOODCATIMGIPFSADDRESS}/${Number(data[i].tokenId)}.png`
               : data[i].nftContract === config.DEDNFTADDRESS
               ? `${config.DEDDOODIMGIPFSADDRESS}/${Number(data[i].tokenId)}.png`
-              : data[i].nftContract === config.DRAGONDOODLEADDRESS
-              ? `${config.DRAGONDOODLEIMGIPFSADDRESS}/${Number(
-                  data[i].tokenId
-                )}.png`
               : data[i].nftContract === config.ELEMENTOWLSADDRESS
               ? `${config.ELEMENTOWLSIMGIPFSADDRESS}/${Number(
                   data[i].tokenId
@@ -167,7 +170,7 @@ const NftGrid = () => {
         ? marketplaceArrary
         : ""
     );
-    setMarketPlaceFilterArray(filterArray);
+    setMarketPlaceSearchFilterArray(filterArray);
     setNftNameSearchState(true);
     setNftCollectionSearchState(false);
     setNftSortAZ(false);
@@ -176,6 +179,7 @@ const NftGrid = () => {
   };
 
   const nftCollectionFilter = (searchNft) => {
+    setMarketPlaceCollectionFilterArray(0);
     let filterArray = [];
     filterArray = marketplaceArrary.filter((marketArray) =>
       marketArray.nftName.toLowerCase().includes(searchNft.toLowerCase())
@@ -184,7 +188,7 @@ const NftGrid = () => {
         ? marketplaceArrary
         : ""
     );
-    setMarketPlaceFilterArray(filterArray);
+    setMarketPlaceCollectionFilterArray(filterArray);
     setNftCollectionSearchState(true);
     setNftSortRecently(false);
     setNftNameSearchState(false);
@@ -198,7 +202,7 @@ const NftGrid = () => {
       filterArray = marketplaceArrary.sort((a, b) =>
         a.nftName.toLowerCase() > b.nftName.toLowerCase() ? 1 : -1
       );
-      setMarketPlaceFilterArray(filterArray);
+      setMarketPlaceAZFilterArray(filterArray);
       setNftSortAZ(true);
       setNftSortRecently(false);
       setNftSortZA(false);
@@ -208,7 +212,7 @@ const NftGrid = () => {
       filterArray = marketplaceArrary.sort((a, b) =>
         a.nftName.toLowerCase() < b.nftName.toLowerCase() ? 1 : -1
       );
-      setMarketPlaceFilterArray(filterArray);
+      setMarketPlaceZAFilterArray(filterArray);
       setNftSortZA(true);
       setNftSortRecently(false);
       setNftSortAZ(false);
@@ -218,7 +222,7 @@ const NftGrid = () => {
       filterArray = marketplaceArrary.sort((a, b) =>
         a.listedTime < b.listedTime ? 1 : -1
       );
-      setMarketPlaceFilterArray(filterArray);
+      setMarketPlaceRecentlyFilterArray(filterArray);
       setNftSortRecently(true);
       setNftSortZA(false);
       setNftSortAZ(false);
@@ -392,7 +396,7 @@ const NftGrid = () => {
                   {nftNameSearchState ? (
                     <>
                       {" "}
-                      {marketplacefilterArray.map((nftArray, index) => (
+                      {marketplaceSearchfilterArray.map((nftArray, index) => (
                         <NftSingle
                           key={index}
                           title={nftArray.nftName}
@@ -407,22 +411,24 @@ const NftGrid = () => {
                   ) : nftCollectionsearchState ? (
                     <>
                       {" "}
-                      {marketplacefilterArray.map((nftArray, index) => (
-                        <NftSingle
-                          key={index}
-                          title={nftArray.nftName}
-                          image={nftArray.nftImgUrl}
-                          price={nftArray.price}
-                          contractAddress={nftArray.nftContract}
-                          priceAsset={nftArray.priceAsset}
-                          tokenId={nftArray.tokenId}
-                        />
-                      ))}
+                      {marketplaceCollectionfilterArray.map(
+                        (nftArray, index) => (
+                          <NftSingle
+                            key={index}
+                            title={nftArray.nftName}
+                            image={nftArray.nftImgUrl}
+                            price={nftArray.price}
+                            contractAddress={nftArray.nftContract}
+                            priceAsset={nftArray.priceAsset}
+                            tokenId={nftArray.tokenId}
+                          />
+                        )
+                      )}
                     </>
                   ) : nftSortAZ ? (
                     <>
                       {" "}
-                      {marketplacefilterArray.map((nftArray, index) => (
+                      {marketplaceAZfilterArray.map((nftArray, index) => (
                         <NftSingle
                           key={index}
                           title={nftArray.nftName}
@@ -437,7 +443,7 @@ const NftGrid = () => {
                   ) : nftSortZA ? (
                     <>
                       {" "}
-                      {marketplacefilterArray.map((nftArray, index) => (
+                      {marketplaceZAfilterArray.map((nftArray, index) => (
                         <NftSingle
                           key={index}
                           title={nftArray.nftName}
@@ -452,7 +458,7 @@ const NftGrid = () => {
                   ) : nftSortRecently ? (
                     <>
                       {" "}
-                      {marketplacefilterArray.map((nftArray, index) => (
+                      {marketplaceRecentlyfilterArray.map((nftArray, index) => (
                         <NftSingle
                           key={index}
                           title={nftArray.nftName}
