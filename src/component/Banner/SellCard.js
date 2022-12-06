@@ -19,6 +19,7 @@ import qaf_nft from "../../assets/images/nftimgs/qaf_nft.png";
 import primordialplanet_nft from "../../assets/images/nftimgs/primordialplanet_nft.png";
 import badbuddies_nft from "../../assets/images/nftimgs/badbuddies_nft.png";
 import badbuddies2_nft from "../../assets/images/nftimgs/badbuddies2_nft.png";
+import badbuddies3_nft from "../../assets/images/nftimgs/badbuddies3_nft.png";
 
 import config from "../../config/config";
 
@@ -58,6 +59,7 @@ const SellCard = () => {
   const [planetoidNftCount, setPlanetoidNftCount] = useState(0);
   const [badbuddiesNftCount, setBadbuddiesNftCount] = useState(0);
   const [badbuddies2NftCount, setBadbuddies2NftCount] = useState(0);
+  const [badbuddies3NftCount, setBadbuddies3NftCount] = useState(0);
 
   const DOODCATCONTRACT = new ethers.Contract(
     config.DOODNFTADDRESS,
@@ -137,6 +139,12 @@ const SellCard = () => {
     Signer
   );
 
+  const BADBUDDIES3CONTRACT = new ethers.Contract(
+    config.BADBUDDIES3ADDRESS,
+    SPACEKITTYABI,
+    Signer
+  );
+
   const getNFTCount = async () => {
     await DOODCATCONTRACT.walletOfOwner(account).then(async (data) => {
       setDoodCatNftCount(data.length);
@@ -196,6 +204,10 @@ const SellCard = () => {
 
     await BADBUDDIES2CONTRACT.walletOfOwner(account).then(async (data) => {
       setBadbuddies2NftCount(data.length);
+    });
+
+    await BADBUDDIES3CONTRACT.walletOfOwner(account).then(async (data) => {
+      setBadbuddies3NftCount(data.length);
     });
   };
 
@@ -329,6 +341,13 @@ const SellCard = () => {
             title="Bad Buddies2"
             count={badbuddies2NftCount}
             contractAddresss={config.BADBUDDIES2ADDRESS}
+          />
+
+          <CollectionCard
+            image={badbuddies3_nft}
+            title="Bad Buddies3"
+            count={badbuddies3NftCount}
+            contractAddresss={config.BADBUDDIES3ADDRESS}
           />
         </motion.div>
       </motion.section>

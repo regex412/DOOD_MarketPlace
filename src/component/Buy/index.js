@@ -78,6 +78,8 @@ const Buy = () => {
         ? `${config.PLANETOIDSIMGIPFSADDRESS}/${nftid}.jpg`
         : contractAddress === config.BADBUDDIESADDRESS
         ? `${config.BADBUDDIESIMGIPFSADDRESS}/${nftid}.png`
+        : contractAddress === config.BADBUDDIES3ADDRESS
+        ? `${config.BADBUDDIES3IMGIPFSADDRESS}/${nftid}.png`
         : `${config.BADBUDDIES2IMGIPFSADDRESS}/${nftid}.png`
     );
     await getMarketItem();
@@ -137,6 +139,8 @@ const Buy = () => {
         ? config.PLANETOIDSIPFSADDRESS
         : contractAddress === config.BADBUDDIESADDRESS
         ? config.BADBUDDIESIPFSADDRESS
+        : contractAddress === config.BADBUDDIES3ADDRESS
+        ? config.BADBUDDIES3IPFSADDRESS
         : config.BADBUDDIES2IPFSADDRESS;
 
     try {
@@ -190,6 +194,8 @@ const Buy = () => {
       ? getNftInfo("QAF")
       : contractAddress === config.PRIMORDIALPLANETOIDSADDRESS
       ? getNftInfo("The Primordial Planetoids")
+      : contractAddress === config.BADBUDDIES3ADDRESS
+      ? getNftInfo("Bad Buddies3")
       : getNftInfo("Bad Buddies");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

@@ -37,6 +37,7 @@ import qaf_nft from "../../assets/images/nftimgs/qaf_nft.png";
 import primordialplanet_nft from "../../assets/images/nftimgs/primordialplanet_nft.png";
 import badbuddies_nft from "../../assets/images/nftimgs/badbuddies_nft.png";
 import badbuddies2_nft from "../../assets/images/nftimgs/badbuddies2_nft.png";
+import badbuddies3_nft from "../../assets/images/nftimgs/badbuddies3_nft.png";
 
 import SPACEKITTYABI from "../../assets/abi/spacekittynftABI.json";
 import SPACEOWLABI from "../../assets/abi/spaceowlnftABI.json";
@@ -139,6 +140,10 @@ const Mynft = () => {
                 ? `${config.BADBUDDIESIMGIPFSADDRESS}/${data[
                     i
                   ].tokenId.toString()}.png`
+                : contractAddress === config.BADBUDDIES3ADDRESS
+                ? `${config.BADBUDDIES3IMGIPFSADDRESS}/${data[
+                    i
+                  ].tokenId.toString()}.png`
                 : `${config.BADBUDDIES2IMGIPFSADDRESS}/${data[
                     i
                   ].tokenId.toString()}.png`,
@@ -186,6 +191,8 @@ const Mynft = () => {
         ? PLANETOIDSABI
         : contractAddress === config.BADBUDDIESADDRESS
         ? SPACEKITTYABI
+        : contractAddress === config.BADBUDDIES3ADDRESS
+        ? SPACEKITTYABI
         : SPACEKITTYABI,
       Signer
     );
@@ -228,6 +235,8 @@ const Mynft = () => {
               ? `${config.PLANETOIDSIMGIPFSADDRESS}/${data[i].toString()}.png`
               : contractAddress === config.BADBUDDIESADDRESS
               ? `${config.BADBUDDIESIMGIPFSADDRESS}/${data[i].toString()}.png`
+              : contractAddress === config.BADBUDDIES3ADDRESS
+              ? `${config.BADBUDDIES3IMGIPFSADDRESS}/${data[i].toString()}.png`
               : `${config.BADBUDDIES2IMGIPFSADDRESS}/${data[i].toString()}.png`,
           tokenID: Number(data[i]).toString(),
           ipfs: config.SPACEOWLIMGIPFS,
@@ -353,6 +362,13 @@ const Mynft = () => {
               nftimg={badbuddies_nft}
               nftname="Bad Buddies"
               contractAddress={config.BADBUDDIESADDRESS}
+            />
+          ) : contractAddress === config.BADBUDDIES3ADDRESS ? (
+            <NftBanner
+              bannerimage={badbuddies_banner}
+              nftimg={badbuddies3_nft}
+              nftname="Bad Buddies3"
+              contractAddress={config.BADBUDDIES3ADDRESS}
             />
           ) : (
             <NftBanner

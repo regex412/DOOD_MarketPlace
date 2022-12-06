@@ -22,6 +22,7 @@ module.exports = {
   PRIMORDIALPLANETOIDSADDRESS: "0x039ee36d11C825437621C16c5D71D05F09bF4B40",
   BADBUDDIESADDRESS: "0x104d6F6E48b4daabe7c4Cc849b0d485f1af48605",
   BADBUDDIES2ADDRESS: "0xf93a5592887B8e46A4Bb808fB8f702F33E60E292",
+  BADBUDDIES3ADDRESS: "0xe2AF8A40d6B0AEEd9A2851Bee78e0D2157a1d8FA",
 
   // Token Addresses to buy
   SDOODTOKENADDRESS: "0x697bb3B5E1eCf4fEbE6016321b0648d3d6C270B6",
@@ -32,65 +33,70 @@ module.exports = {
 
   // IPFS Addresss
   DOODCATIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmdjzdH9N5QYpBVRc3FoKo2z77piHHrzh6QstztVA8TfyE",
+    "https://spacecats.mypinata.cloud/ipfs/QmdjzdH9N5QYpBVRc3FoKo2z77piHHrzh6QstztVA8TfyE",
   DEDDOODIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmQTLAVxNHWSShaWq2WGuRWUQKX1ptqoJzMCGfw5tncKYv",
+    "https://spacecats.mypinata.cloud/ipfs/QmQTLAVxNHWSShaWq2WGuRWUQKX1ptqoJzMCGfw5tncKYv",
   SPACEKITTYIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmXpmUf1TgeLMNfmeE94BBrAdSKULmt1GpRCBwqWv4b8qM",
+    "https://spacecats.mypinata.cloud/ipfs/QmXpmUf1TgeLMNfmeE94BBrAdSKULmt1GpRCBwqWv4b8qM",
   SPACEOWLIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmfBzosY7rHzj2vbafxwPwoMkTVaEhBxivkyQR5nfHfX7K",
+    "https://spacecats.mypinata.cloud/ipfs/QmfBzosY7rHzj2vbafxwPwoMkTVaEhBxivkyQR5nfHfX7K",
   DRAGONDOODLEIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmbrLg6cFLnbwCpks3hsGSHXKWDwAZRJ7VGWefTQPcbe8Y",
+    "https://spacecats.mypinata.cloud/ipfs/QmbrLg6cFLnbwCpks3hsGSHXKWDwAZRJ7VGWefTQPcbe8Y",
   ELEMENTOWLSIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmUDFvmc3Ff4VdiEGmTwfR6MfaDv4GuMhANtWPUVM7MC1n",
+    "https://spacecats.mypinata.cloud/ipfs/QmUDFvmc3Ff4VdiEGmTwfR6MfaDv4GuMhANtWPUVM7MC1n",
   ELEMENTDOGSIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmVHAnwiAf8Rds7CE81dMEffsQJNTa3PATRCjs32Q4ncsd",
+    "https://spacecats.mypinata.cloud/ipfs/QmVHAnwiAf8Rds7CE81dMEffsQJNTa3PATRCjs32Q4ncsd",
   ELEMENTOCTOPUSIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmTEDC4At3Qb8nUT8UPjoUjK6ZrQsDkMzwB8SY6VABqjky",
+    "https://spacecats.mypinata.cloud/ipfs/QmTEDC4At3Qb8nUT8UPjoUjK6ZrQsDkMzwB8SY6VABqjky",
   QAFIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmPx9K2gfN44Yg84zV3bbmgwSYiHGE8sDT6b69imtHtDTT",
+    "https://spacecats.mypinata.cloud/ipfs/QmPx9K2gfN44Yg84zV3bbmgwSYiHGE8sDT6b69imtHtDTT",
   ROYALRATSIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/Qmeh5rERAXS5tTyoXweJ6Pm6uqD1fYeAY7uwePcQFs4Bfk",
+    "https://spacecats.mypinata.cloud/ipfs/Qmeh5rERAXS5tTyoXweJ6Pm6uqD1fYeAY7uwePcQFs4Bfk",
   CLASSICALCATSIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/Qmenyg8SiTw2jf1xRJipLHsUdkZ8jApoPo8Y9jybfSmCSp",
+    "https://spacecats.mypinata.cloud/ipfs/Qmenyg8SiTw2jf1xRJipLHsUdkZ8jApoPo8Y9jybfSmCSp",
   ANCIENTALIENSIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmXPWBM6Uqtamju7JcKPuUHAPcdyxTLVJCiHWs6TqKCABy",
+    "https://spacecats.mypinata.cloud/ipfs/QmXPWBM6Uqtamju7JcKPuUHAPcdyxTLVJCiHWs6TqKCABy",
   PLANETOIDSIPFSADDRESS:
     "https://bafybeigm35d7s5oahjphyqkaeqswvnry7rlva2r5sk73f5bkjp3ybfgjee.ipfs.nftstorage.link",
   BADBUDDIESIPFSADDRESS:
     "https://bafybeibfmtnyyojal4hgjgs7yz5mmwcfotvbj62vzlrlzjqjx2ibg42y5q.ipfs.nftstorage.link",
   BADBUDDIES2IPFSADDRESS:
     "https://bafybeidgictdcpg7fabu4v5epg7md4vi3ce7cepzoilq77zessqeefb3wm.ipfs.nftstorage.link",
+  BADBUDDIES3IPFSADDRESS:
+    "https://bafybeigje2kqqsjgjzxu7m6ok47iq647thlm5klxdru3fvdapgac7m3fqu.ipfs.nftstorage.link",
 
   // IMG IPFS Address
   DOODCATIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmWGAWmuHZ4xzMp8eRyB8Ntut9xwPuKej9XmM5AWmsNQLZ",
+    "https://spacecats.mypinata.cloud/ipfs/QmWGAWmuHZ4xzMp8eRyB8Ntut9xwPuKej9XmM5AWmsNQLZ",
+
   DEDDOODIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmPHYcJ3scDDCzxsMv7KBLj8dRoX4DbbmgrVsyBhZe7w3m",
+    "https://spacecats.mypinata.cloud/ipfs/QmPHYcJ3scDDCzxsMv7KBLj8dRoX4DbbmgrVsyBhZe7w3m",
   SPACEKITTYIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmWHSkY7FuDjN5GYWpYy2iNWtGGQWsNGrfoY6MB5yjk3MC",
+    "https://spacecats.mypinata.cloud/ipfs/QmWHSkY7FuDjN5GYWpYy2iNWtGGQWsNGrfoY6MB5yjk3MC",
   SPACEOWLIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmSUoT9TEsCyJ8Wg358DJZ83AFV1tuxvfcQRmurturBLcG",
+    "https://spacecats.mypinata.cloud/ipfs/QmSUoT9TEsCyJ8Wg358DJZ83AFV1tuxvfcQRmurturBLcG",
   DRAGONDOODLEIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmSNUC7vQk9aJb4wSBvhGcqJffrcohBEnwe1TBQgx79Hv2",
+    "https://spacecats.mypinata.cloud/ipfs/QmSNUC7vQk9aJb4wSBvhGcqJffrcohBEnwe1TBQgx79Hv2",
   ELEMENTOWLSIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmVhYZgzoLeW4zTG9AjzfsQ1RdX82y9aToKKyrdcQhez7h",
+    "https://spacecats.mypinata.cloud/ipfs/QmVhYZgzoLeW4zTG9AjzfsQ1RdX82y9aToKKyrdcQhez7h",
   ELEMENTDOGSIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmbupbxwRU1X1VBrZrXAEuJ5p4Ybm1LmEZXAfhZk81A58L",
+    "https://spacecats.mypinata.cloud/ipfs/QmbupbxwRU1X1VBrZrXAEuJ5p4Ybm1LmEZXAfhZk81A58L",
   ELEMENTOCTOPUSIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmadidPpLEQKEoTGhdNafzosbmjCewoTkK4RVxyJpfeD41",
+    "https://spacecats.mypinata.cloud/ipfs/QmadidPpLEQKEoTGhdNafzosbmjCewoTkK4RVxyJpfeD41",
   QAFIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/Qmc4UMxVj1ErgPddqgC9Jh6SaAzk5pi9gUfsMtkZgt87nD",
+    "https://spacecats.mypinata.cloud/ipfs/Qmc4UMxVj1ErgPddqgC9Jh6SaAzk5pi9gUfsMtkZgt87nD",
   ROYALRATSIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmQimSMic67Sb6i2Ug6ik2w65usTs2jhp63Y6egGi9VsGm",
+    "https://spacecats.mypinata.cloud/ipfs/QmQimSMic67Sb6i2Ug6ik2w65usTs2jhp63Y6egGi9VsGm",
   CLASSICALCATSIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmTKi3DBJXeAtL5mq1d1DGdoyC9CpkXBUwPyJSUzChT6Pu",
+    "https://spacecats.mypinata.cloud/ipfs/QmTKi3DBJXeAtL5mq1d1DGdoyC9CpkXBUwPyJSUzChT6Pu",
   ANCIENTALIENSIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/QmTS6nANHKGfvbQ8yqpkppUbTEcFSoSWEKoV9satdBCoiw",
+    "https://spacecats.mypinata.cloud/ipfs/QmTS6nANHKGfvbQ8yqpkppUbTEcFSoSWEKoV9satdBCoiw",
   PLANETOIDSIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/bafybeiac6l2svv5jdz6jkzm3nthui5umdy4piwle3ibf2wozgwfsn3oj6i",
+    "https://bafybeiac6l2svv5jdz6jkzm3nthui5umdy4piwle3ibf2wozgwfsn3oj6i.ipfs.nftstorage.link",
   BADBUDDIESIMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/bafybeiewbiuwfm4lb32dqu2iy2beexpgbe2bixwyv4mbrqysvsvjh4w2bu",
+    "https://bafybeiewbiuwfm4lb32dqu2iy2beexpgbe2bixwyv4mbrqysvsvjh4w2bu.ipfs.nftstorage.link",
   BADBUDDIES2IMGIPFSADDRESS:
-    "https://gateway.pinata.cloud/ipfs/bafybeidal7gu2222yad5a4muqtsxzbtrrlu4cueagsalzqidgv6zftbgry",
+    "https://bafybeidal7gu2222yad5a4muqtsxzbtrrlu4cueagsalzqidgv6zftbgry.ipfs.nftstorage.link",
+  BADBUDDIES3IMGIPFSADDRESS:
+    "https://bafybeifmncnwroplafavhxgzoemlvxdp4354hpcgt4qw5hutbotrlhf3fa.ipfs.nftstorage.link",
 };
